@@ -1,0 +1,17 @@
+{
+  "name": "mern_backend",
+  "version": "1.0.0",
+  "description": "A backend using MERN",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "Backend",
+    "Node",
+    "express"
+  ],
+  "author": "\"Vivek D\"",
+  "license": "ISC"
+}

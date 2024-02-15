@@ -6,7 +6,21 @@ import connectDB from "./db/index.js";
 dotenv.config({
   path: "./env",
 });
-connectDB();
+
+connectDB()
+  .then(() => {
+    app.listen(process.env.PORT || 8000, () => {
+      console.log(`Sever is running at port ${process.env.PORT}`);
+    });
+
+    app.on("error", () => {
+      console.log("Error : ", error);
+      throw err;
+    });
+  })
+  .catch((err) => {
+    console.log("MongoDB connectin failed :", err);
+  });
 
 /*
 import express from "express";

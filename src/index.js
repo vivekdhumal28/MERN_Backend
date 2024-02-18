@@ -1,6 +1,7 @@
 // require('dotenv').config({path: './env'})
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
+import { app } from "./app.js";
 
 // -r dotenv/config --experimental-json-modules (use in package.json for dotenv load)
 dotenv.config({
@@ -13,10 +14,10 @@ connectDB()
       console.log(`Sever is running at port ${process.env.PORT}`);
     });
 
-    app.on("error", () => {
-      console.log("Error : ", error);
-      throw err;
-    });
+    // app.on("error", () => {
+    //   console.log("Error : ", error);
+    //   throw err;
+    // });
   })
   .catch((err) => {
     console.log("MongoDB connection failed :", err);

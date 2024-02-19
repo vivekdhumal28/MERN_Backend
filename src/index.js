@@ -14,10 +14,10 @@ connectDB()
       console.log(`Sever is running at port ${process.env.PORT}`);
     });
 
-    // app.on("error", () => {
-    //   console.log("Error : ", error);
-    //   throw err;
-    // });
+    app.on("error", (error) => {
+      console.log("Error : ", error);
+      throw error;
+    });
   })
   .catch((err) => {
     console.log("MongoDB connection failed :", err);

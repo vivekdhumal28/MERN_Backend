@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import { router as userRouter } from "./routes/user.routes.js";
 
 const app = express();
 
@@ -23,10 +24,10 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // routes import (seggregation)
-import userRouter from "./routes/user.routes.js";
+// import { router as userRouter } from "./routes/user.routes.js";
 
 // routes declaration  route, router
-app.use("/api/v1/users", userRouter);
-// http://localhost:8000/api/v1/users/register
+app.use("/api/v2/users", userRouter);
+// http://localhost:8000/api/v2/users/register
 
 export { app };

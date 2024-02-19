@@ -13,7 +13,7 @@ export ApiResponce
 
 Informational responces = 100 - 199
 Successful responces = 200 - 299
-Redirectional responces = 300 - 399 morethan this are Api Error
+Redirectional responces = 300 - 399 more than this are Api Error
 Client Error  messages = 400 - 499
 Sever Error responces = 500 - 599
 
